@@ -4,6 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Food from './food';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,13 +57,59 @@ export default function Products() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item 1
+        <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+          </Grid>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item 2
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+          </Grid>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item 3
+      <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+            <Grid item xs={4}>
+              <Food/>
+            </Grid>
+          </Grid>
       </TabPanel>
     </Box>
   );
